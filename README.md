@@ -1,40 +1,110 @@
-It clearly explains setup, usage, structure, and submission — perfect for your skills test submission.
+# Coalition FED Skills Test - Patient Diagnostic Dashboard
 
-# Coalition Technologies FED Skills Test — Patient Dashboard
+# --------------------------------------
+# Overview
+# --------------------------------------
+# This is a single-page React application built from an Adobe XD template.
+# It fetches patient diagnostic data from the Coalition Technologies Patient Data API.
+# Only Jessica Taylor's data is displayed, including blood pressure charts, diagnostic history, and lab results.
 
-This project is a front-end implementation of the **Tech.Care Patient Dashboard** design (from Adobe XD) for the **Coalition Technologies FED Skills Test**.  
-It was built using **React**, **Vite**, and **Chart.js**, and integrates with the **Coalition Patient Data API** to dynamically display patient information and diagnosis history.
+# --------------------------------------
+# Features
+# --------------------------------------
+# - Display patient information (profile, age, contact, insurance)
+# - Blood pressure chart visualization with Chart.js
+# - Diagnostic history and lab results
+# - Search functionality for patient data
+# - Fully responsive, matches Adobe XD design
 
----
+# --------------------------------------
+# Technologies Used
+# --------------------------------------
+# React
+# Vite
+# Chart.js & react-chartjs-2
+# Axios / Fetch API
+# Basic Auth
 
-## 📋 Overview
+# --------------------------------------
+# Installation
+# --------------------------------------
+# Clone the repository
+git clone <your-repo-url>
 
-The application converts the provided **Adobe XD mockup** into a responsive, interactive single-page web app.  
-It fetches data from the Coalition Technologies API and displays a patient's information, diagnosis history, vitals, and lab results — closely matching the XD design and UI structure.
+# Navigate into the project
+cd coalition-fed-test
 
-### Key Features
-- Fetches live data from the Coalition API using Basic Auth  
-- Displays all patients in the sidebar with click-to-select functionality  
-- Shows blood pressure trends using Chart.js  
-- Presents patient vitals, diagnostic list, and lab results  
-- Responsive, clean, and accessible UI built with modern CSS  
-- Uses modular React components and clean code structure
+# Install dependencies
+npm install
 
----
+# Run the development server
+npm run dev
 
-## 🧠 Tech Stack
+# Open the app in your browser
+# URL: http://localhost:5173
 
-| Area | Technology |
-|------|-------------|
-| Framework | [React (Vite)](https://vitejs.dev/guide/) |
-| Charting | [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/) |
-| Styling | Custom CSS (no frameworks) |
-| API | [Coalition Technologies Patient Data API](https://documenter.getpostman.com/view/11861104/2sA35G42ve) |
+# --------------------------------------
+# API Integration
+# --------------------------------------
+# Endpoint: https://fedskillstest.coalitiontechnologies.workers.dev
+# Authorization: Basic Auth
+#   Username: coalition
+#   Password: skills-test
 
----
+# Example API call in JavaScript
+# --------------------------------------
+# const response = await fetch('https://fedskillstest.coalitiontechnologies.workers.dev', {
+#   headers: {
+#     'Authorization': `Basic ${btoa('coalition:skills-test')}`
+#   }
+# });
+# const data = await response.json();
+# const jessicaData = data.find(patient => patient.name === "Jessica Taylor");
+# --------------------------------------
 
-## ⚙️ Installation & Setup
+# --------------------------------------
+# Project Structure
+# --------------------------------------
+# coalition-fed-test/
+# ├─ public/
+# │  └─ index.html
+# ├─ src/
+# │  ├─ components/
+# │  │  ├─ PatientInfo.jsx
+# │  │  ├─ BloodPressureChart.jsx
+# │  │  ├─ LabResults.jsx
+# │  │  └─ SearchBar.jsx
+# │  ├─ App.jsx
+# │  ├─ main.jsx
+# │  └─ styles/
+# │     └─ main.css
+# ├─ package.json
+# └─ README.md
 
-1. **Clone or extract the project**
-   ```bash
-   cd coalition-fed-test
+# --------------------------------------
+# Usage
+# --------------------------------------
+# 1. Start the app
+npm run dev
+
+# 2. Use the search bar to filter patient data (Jessica Taylor only)
+
+# 3. View blood pressure chart and diagnostic history
+
+# 4. Lab results update dynamically based on API response
+
+# --------------------------------------
+# Recommended Enhancements
+# --------------------------------------
+# - Additional charts for heart rate, respiratory rate, temperature
+# - Fully responsive design for mobile and tablet
+# - Dynamic filtering of diagnostic history
+
+# --------------------------------------
+# Suggested Application Names
+# --------------------------------------
+# DiagnoView
+# MediTrack
+# HealthScope
+# PatientInsight
+# VitalTrend
