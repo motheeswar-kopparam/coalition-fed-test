@@ -1,16 +1,40 @@
-# React + Vite
+It clearly explains setup, usage, structure, and submission — perfect for your skills test submission.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Coalition Technologies FED Skills Test — Patient Dashboard
 
-Currently, two official plugins are available:
+This project is a front-end implementation of the **Tech.Care Patient Dashboard** design (from Adobe XD) for the **Coalition Technologies FED Skills Test**.  
+It was built using **React**, **Vite**, and **Chart.js**, and integrates with the **Coalition Patient Data API** to dynamically display patient information and diagnosis history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📋 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application converts the provided **Adobe XD mockup** into a responsive, interactive single-page web app.  
+It fetches data from the Coalition Technologies API and displays a patient's information, diagnosis history, vitals, and lab results — closely matching the XD design and UI structure.
 
-## Expanding the ESLint configuration
+### Key Features
+- Fetches live data from the Coalition API using Basic Auth  
+- Displays all patients in the sidebar with click-to-select functionality  
+- Shows blood pressure trends using Chart.js  
+- Presents patient vitals, diagnostic list, and lab results  
+- Responsive, clean, and accessible UI built with modern CSS  
+- Uses modular React components and clean code structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Tech Stack
+
+| Area | Technology |
+|------|-------------|
+| Framework | [React (Vite)](https://vitejs.dev/guide/) |
+| Charting | [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/) |
+| Styling | Custom CSS (no frameworks) |
+| API | [Coalition Technologies Patient Data API](https://documenter.getpostman.com/view/11861104/2sA35G42ve) |
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone or extract the project**
+   ```bash
+   cd coalition-fed-test
